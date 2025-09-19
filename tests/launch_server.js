@@ -2,7 +2,7 @@ import { launchServer } from "camoufox-js";
 import { firefox } from "playwright-core";
 
 // you might need to run `npx camoufox-js fetch` to download the browser after installing the package
-
+console.log("Launching server");
 const server = await launchServer({ port: 8888, ws_path: "/camoufox" });
 const browser = await firefox.connect(server.wsEndpoint());
 
