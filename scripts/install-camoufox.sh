@@ -6,7 +6,7 @@ echo "Installing Firefox with Camouflage Theme"
 apt-get update
 apt install -y libgtk-3-0 libx11-xcb1 libasound2 
 
-#python3 pip python3-venv
+# apt install -y python3 pip python3-venv
 
 # python3 -m venv venv
 # source venv/bin/activate
@@ -14,7 +14,10 @@ apt install -y libgtk-3-0 libx11-xcb1 libasound2
 
 # python3 -m camoufox fetch
 
-npm install -y camoufox-js
+# Create package.json with module type
+echo '{"type": "module"}' > package.json
+
+npm install -y camoufox-js run
 npx camoufox-js fetch
 
 
